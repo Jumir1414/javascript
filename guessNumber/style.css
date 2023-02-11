@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #350363;
+    --background: #ffe9db;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #491579;
+    margin: auto;
+
+}
+
+main {
+    margin: 5px;
+    width: 40vw;
+    height: auto;
+    text-align: center;
+    background-color: var(--background);
+    border: solid var(--dark);
+    border-width: 0.8rem;
+    border-radius: 1rem;
+    padding: 8rem 5 rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 2rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+#wecomeScreen {
+    height: 100vh;
+}
+
+.button-wapper {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    min-width: 15rem;
+    background-color: #673fd7;
+    border-radius: 8px;
+    border-style: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 1.5rem 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: #350363;
+}
+
+#gameArea {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    border: 0.1rem solid lightgray;
+    background: transparent;
+    margin: 2rem 0;
+    padding: 10px 0;
+    width: 15rem;
+    text-align: center;
+}
+
+.stats {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+
+}
+
+.info span {
+    font-size: 1.5rem;
+    color: red;
+}
+
+#newGame button {
+    margin-top: 15px;
+}
