@@ -1,4 +1,9 @@
-let obj = { shrimp: 15, tots: 12 };
+let obj = {
+  Name: "Hari",
+  Age: 32,
+  Address: "Nepal",
+  Contact: 98000000,
+};
 resultArray = [];
 const toArray = (obj) => {
   for (let key in obj) {
