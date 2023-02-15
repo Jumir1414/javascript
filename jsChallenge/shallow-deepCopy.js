@@ -20,7 +20,7 @@ function doDeepCopy(input) {
   for (let keys in input) {
     // console.log(keys, typeof input[keys]);
     if (typeof input[keys] === "object") {
-      result[keys] = {};
+      result[keys] = [];
       for (let index in input[keys]) {
         if (typeof input[keys][index] === "object") {
           result[keys][index] = {};
