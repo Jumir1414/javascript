@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stopWatch.css">
+    <title>Stopwatch</title>
+</head>
+    <div class="container">
+
+        <div class="time">
+            <div id="hour">00</div>
+            <span>hrs</span>
+            <div id="min">00</div>
+            <span>mins</span>
+            <div id="sec">00</div>
+            <span>secs</span>
+            <div id="count">00</div>
+        </div>
+        <div class="buttons">
+            <button  type="button" onclick="handleReset()">reset</button>
+            <button  type="button"  onclick="handleStart()" >start</button>
+            <button  type="button"  onclick="handleStop()" >stop</button>
+        </div>
+    </div>
+    <script type="module">
+        import{stop,reset,start,stopWatch} from './stopWatch.js';
+        window.handleStop=stop;
+        window.handleReset =reset;
+        window.handleStart =start;
+        window.stopWatch=stopWatch;
+    </script>
+    <!-- <script src="./stopWatch.js"></script> -->
+</body>
+</html>
