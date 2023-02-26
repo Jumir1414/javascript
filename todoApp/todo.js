@@ -2,12 +2,36 @@ let listArray = [];
 const addBtn = document.getElementById("addList");
 const todoInputField = document.getElementById("todoInput");
 const List = document.getElementById("List");
+const Loader = document.getElementById("loader");
 let storedListArray = localStorage.getItem("todoList");
 let editId = null;
-if (storedListArray != null) {
-  listArray = JSON.parse(storedListArray);
-}
+// if (storedListArray != null) {
+//   listArray = JSON.parse(storedListArray);
+// }
 
+const delay = (t, v) => {
+  return new Promise((resolve) => setTimeout(resolve, t, v));
+};
+let checkStorage = async (storageArray) => {
+  Loader.style.display = "block";
+  await delay(4000);
+
+  return new Promise((resolve, reject) => {
+    if (storageArray != null) {
+      resolve(JSON.parse(storageArray));
+    } else {
+      reject(console.log("hello!!!"));
+    }
+  });
+};
+
+checkStorage(storedListArray).then((Response) => {
+  listArray = Response;
+  Loader.style.display = "none";
+  displayList();
+}).finally = () => {
+  console.log("hello from finally!!");
+};
 const displayList = () => {
   let todo = "";
   listArray.forEach((list, index) => {
@@ -31,7 +55,7 @@ const displayList = () => {
   });
   List.innerHTML = todo;
 };
-displayList();
+
 addBtn.onclick = () => {
   const list = todoInputField.value;
   if (list != "") {
