@@ -1,0 +1,81 @@
+:root {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-items: center;
+    align-items: center;
+
+}
+
+#header {
+    color: rgb(17, 17, 48);
+    font-size: 2rem;
+    margin-bottom: -30px;
+}
+
+#input {
+    border: 2px solid rgb(17, 17, 48);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    gap: 20px;
+    height: 2rem;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+#todoInput {
+    width: 75%;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.addButton {
+    height: 130%;
+    width: 20%;
+    background-color: rgb(17, 17, 48);
+    cursor: pointer;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+}
+
+.addButton:hover {
+    background-color: white;
+    color: rgb(17, 17, 48);
+    font-weight: bolder;
+}
+
+table {
+    margin-top: 10px;
+    width: 37%;
+    font-size: 1rem;
+    border-collapse: collapse;
+
+}
+
+td,
+th {
+
+    text-align: left;
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #c2bfbf;
+}
+
+#cross-name {
+    text-decoration: line-through;
+}

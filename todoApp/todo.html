@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <title>todo_App</title>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <h1>Todo Lists</h1>
+            
+        </div>
+        <div id="input" >
+            <input id="todoInput" type="text" placeholder="Enter your list" value="">
+            <button id="addList"  class="addButton"> Add List </button>
+           
+        </div>
+        
+        <table >
+            <thead>
+            <tr>
+                <th>S.N.</th>
+                <th>Todo -- list</th>
+                <th> Action</th>
+
+            </tr>
+           
+            </thead>
+            
+            <tbody id="List">
+
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="./todo.js"></script>
+</body>
+</html>
