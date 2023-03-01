@@ -1,0 +1,66 @@
+:root {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.header {
+    color: rgb(17, 17, 48);
+    font-size: 2rem;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 30rem;
+
+}
+
+.createUser {
+    background-color: rgb(17, 17, 48);
+    cursor: pointer;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    height: 2rem;
+}
+
+.createUser:hover {
+    background-color: white;
+    color: rgb(17, 17, 48);
+    font-weight: bolder;
+}
+
+table {
+    margin-top: 10px;
+    font-size: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+td,
+th {
+
+    text-align: left;
+    padding: 8px;
+    width: auto;
+
+}
+
+tr:nth-child(even) {
+    background-color: #c2bfbf;
+}
+
+#loader {
+    display: none;
+}

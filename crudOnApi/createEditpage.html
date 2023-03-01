@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./createEditpage.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <span id="loader">loading!!!!!!</span>
+        <h1 id="title"></h1>
+        <div class="form">
+        <div class="text1">
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" placeholder="Enter UserName">
+        </div>
+        <div class="text2">
+            <label for="email">email:</label>
+            <input type="text" id="email" placeholder="Enter Email">            
+        </div>
+        <div class="gender">
+            <label for="gender">choose gender:</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="status">
+            <label for="status">choose status:</label>
+            <select name="status" id="status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <div class="btn">
+            <button id="submit">submit</button>
+        </div>
+        </div>
+    </div>
+    <script src="./createEditpage.js"></script>
+</body>
+</html>
