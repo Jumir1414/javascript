@@ -6,12 +6,11 @@ const OUTFIELD = document.getElementById("convertedAmount");
 const BTN = document.getElementById("btn");
 
 export const getCurencyData = async () => {
-  let dataList = `<option value="" selected>Choose Currency</option>`;
   let response = await fetch(
     `${BASE_URL}/api/forex/v1/app-rate?page=1&per_page=10`
   ).catch((error) => console.error(error));
   const DATAS = await response.json();
-
+  let dataList = `<option value="" selected>Choose Currency</option>`;
   DATAS.forEach((data) => {
     if (data.unit >> 1) {
       dataList += `
