@@ -75,6 +75,12 @@ if (editId != "") {
   btn.innerHTML = "Create";
 }
 
+function validMail(mail) {
+  return /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
+    mail
+  );
+}
+
 btn.onclick = () => {
   data = {
     name: usernameField.value,
@@ -82,11 +88,22 @@ btn.onclick = () => {
     gender: genderField.value,
     status: statusField.value,
   };
-  if (editId != "") {
-    postData(data, editId);
-    window.location.href = "./displayPage.html";
+
+  if (data.name != "") {
+    let flag = validMail(data.email);
+    console.log(flag);
+    if (flag == true) {
+      if (editId != "") {
+        postData(data, editId);
+        window.location.href = "./displayPage.html";
+      } else {
+        createData(data);
+        window.location.href = "./displayPage.html";
+      }
+    } else {
+      alert("Empty Email");
+    }
   } else {
-    createData(data);
-    window.location.href = "./displayPage.html";
+    alert("Empty Name");
   }
 };
