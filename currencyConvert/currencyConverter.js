@@ -13,9 +13,11 @@ export const getCurencyData = async () => {
   const DATAS = await response.json();
 
   DATAS.forEach((data) => {
-    if (data.unit == "100") {
+    if (data.unit >> 1) {
       dataList += `
-    <option value="${data.buy / 100}">${data.name} (${data.iso3}) </option>
+    <option value="${data.buy / data.unit}">${data.name} (${
+        data.iso3
+      }) </option>
     `;
     } else {
       dataList += `
