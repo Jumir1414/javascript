@@ -1,0 +1,9 @@
+.container-md.mt-5 {
+    border: 1px solid black;
+    height: auto;
+    width: 40%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(167, 167, 218);
+
+}
