@@ -13,11 +13,6 @@ const requestOptions = (i) => {
   return requestOptions;
 };
 
-// var requestOptions1 = {
-//   method: "DELETE",
-//   headers: myHeaders,
-//   redirect: "follow",
-// };
 const getResult = async () => {
   Loader.style.display = "block";
   //   List.style.display = "none";
