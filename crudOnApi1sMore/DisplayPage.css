@@ -1,0 +1,15 @@
+.header {
+    color: rgb(17, 17, 48);
+    font-size: 2rem;
+    height: 3rem;
+
+}
+
+.create {
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+#loader {
+    display: none;
+}
