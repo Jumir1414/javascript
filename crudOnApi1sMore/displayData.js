@@ -1,6 +1,7 @@
 import { BASE_URL } from "./constant.js";
 import { requestOptions1 } from "./requestOption.js";
 import { getId } from "./deleteData.js";
+
 const list = document.getElementById("list");
 const loader = document.getElementById("loader");
 
@@ -24,8 +25,8 @@ export const displayData = async () => {
       &#128994</td>
       <td class="d-flex justify-content-between align-items-center">
        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="sendId(${user.id})" >Delete</button> 
-       <button type="button" class="btn btn-info">View</button> 
-        <a href="" >Edit</a></td>
+       <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick="viewUser(${user.id})">View</button> 
+        <a id="edit" data-bs-toggle="modal" data-bs-target="#exampleModal1" onclick="handleModel(${user.id})" >Edit</a></td>
     </tr>
      `;
     } else {
@@ -38,10 +39,10 @@ export const displayData = async () => {
       <td >${user.status}
       &#128308;</td>
       <td class="d-flex justify-content-between align-items-center"> 
-      <button id="delete" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="sendId(${user.id})"
+      <button id="delete" type="button" class="btn btn-danger" data-bs-toggle="modal"  data-bs-target="#exampleModal" onclick="sendId(${user.id})"
       >Delete</button>
-       <button type="button" class="btn btn-info">View</button> 
-        <a href="" >Edit</a></td>
+       <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal3" onclick="viewUser(${user.id})">View</button> 
+        <a id="edit" data-bs-toggle="modal" data-bs-target="#exampleModal1" onclick="handleModel(${user.id})" >Edit</a></td>
     </tr>
      `;
     }
